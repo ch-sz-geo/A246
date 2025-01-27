@@ -1,0 +1,81 @@
+== Modelltransformationen
+=== Transformation ins minimale Geodatenmodell des Bundes
+* Quellmodell: Das hier beschriebene Datenmodell
+* Zielmodell: http://models.geo.admin.ch/BAFU/todo[<Modellname>] (Version: 2023-03-20)
+
+
+=== Transformation ins Transfermodell ÖREB-Kataster
+* Quellmodell: Das hier beschriebene Datenmodell
+* Zielmodell: https://models.geo.admin.ch/V_D/OeREB/OeREBKRMtrsfr_V2_0.ili[OeREBKRMtrsfr_V2_0] (Version: 2021-04-14)
+
+==== Klasse `+DarstellungsDienst+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| `+ch.sz.a094b.oereb.wald.statische_waldgrenze.linie+`
+| `+VerweisWMS+`
+|===
+
+==== Klasse `+Eigentumsbeschraenkung+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| Der Wert für `+Rechtsstatus+` wird regelbasiert abgeleitet (siehe unten) | `+Rechtsstatus+`
+| Datum, an dem die Publikation im ÖREB-Katastersystem erfolgt; wird durch den Publikationsprozess gesetzt m| publiziertAb
+| (aktuell nicht verwendet und daher leer) m| publiziertBis
+|===
+
+Regeln für die Ableitung des Wertes für `+Rechtsstatus+`:
+|===
+h| Regel h| Rechtsstatus
+a| Der Wert von `+Waldgrenze.Begruendungsverfahren+` muss gesetzt sein und der Wert von `+Waldgrenze.Aufhebungsverfahren+` muss leer sein. +
+Zudem darf der Code des Waldfeststellungstatus `+Verfahrensstatus.Code+` (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) nicht einer der folgenden Werte aufweisen: 'abgeschlossen', 'abgeschlossen_ohne_Verfuegung', 'unbekannt'.
+| `+laufendeAenderung_Begruendung+`
+| Der Wert von `+Waldgrenze.Begruendungsverfahren+` muss gesetzt sein und der Wert von `+Waldgrenze.Aufhebungsverfahren+` muss leer sein. +
+Zudem muss der Code des Waldfeststellungstatus `+Verfahrensstatus.Code+` (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) den Wert 'abgeschlossen' aufweisen. | `+inKraft+`
+| Die Werte von `+Waldgrenze.Begruendungsverfahren+` und `+Waldgrenze.Aufhebungsverfahren+` müssen gesetzt sein. +
+Zudem darf der Code des Waldfeststellungstatus `+Verfahrensstatus.Code+` des Aufhebungsverfahrens (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) nicht einer der folgenden Werte aufweisen: 'abgeschlossen', 'abgeschlossen_ohne_Verfuegung', 'unbekannt'.
+| `+laufendeAenderung_Aufhebung+`
+| Die Werte von `+Waldgrenze.Begruendungsverfahren+` und `+Waldgrenze.Aufhebungsverfahren+` müssen gesetzt sein. +
+Zudem muss der Code des Waldfeststellungstatus `+Verfahrensstatus.Code+` des Aufhebungsverfahrens (hergeleitet über `+Waldfeststellung.rVerfahrensstatus+`) den Wert 'abgeschlossen' aufweisen.
+| `+inKraft_Aufhebung+`
+|===
+
+==== Klasse `+Geometrie+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| - - - m| Punkt
+m| Waldgrenze.Geometrie m| Linie
+| - - - m| Flaeche
+| analog `+Eigentumsbeschraenkung.Rechtsstatus+` m| Rechtsstatus
+| analog `+Eigentumsbeschraenkung.publiziertAb+` m| publiziertAb
+| analog `+Eigentumsbeschraenkung.publiziertBis+` m| publiziertBis
+| https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/8646c41b-543e-401f-836d-4b6beca7370d[Link auf GeoCat] m| MetadatenGeobasisdaten
+|===
+
+==== Klasse `+LegendeEintrag+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+m| Typ.Symbol m| Symbol
+m| Typ.Name m| LegendeText
+m| Typ.Code m| ArtCode
+m| https://data.geo.sz.ch/public/Themen/A057b/[Legende.xml] m| ArtCodeliste
+| fix: " `+ch.StatischeWaldgrenzen+` " m| Thema
+| - - - m| SubThema
+|===
+
+
+[cols="e,m,^,>s",width="25%"]
+|===
+|1 >s|2 |3 |4
+^|5 2.2+^.^|6 .3+<.>m|7
+^|8
+|9 2+>|10
+|===
+
+
+ifdef::backend-pdf[]
+<<<
+endif::[]
