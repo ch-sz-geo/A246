@@ -210,6 +210,9 @@ th {
 <li><a href="#_topic_fachdaten">4.1. Topic <code>Fachdaten</code></a>
 <ul class="sectlevel3">
 <li><a href="#_klasse_forstkreis">4.1.1. Klasse <code>Forstkreis</code></a></li>
+<li><a href="#_klasse_forstrevier">4.1.2. Klasse <code>Forstrevier</code></a></li>
+<li><a href="#_klasse_gebiet">4.1.3. Klasse <code>Gebiet</code></a></li>
+<li><a href="#_klasse_person">4.1.4. Klasse <code>Person</code></a></li>
 </ul>
 </li>
 </ul>
@@ -481,14 +484,14 @@ Kuno Epper (Kep), AGI</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nummer</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forstkreisnummer gemäss</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forstkreisnummer gemäss §2 in [4]</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentliche Bemerkung zum Objekt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Das ist eine öffentliche Bemerkung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bezeichnung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bezeichnung des Forstkreises</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Muotatal, Fronalpstock, Schwyz, Rossberg, Rigi</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
@@ -498,10 +501,171 @@ Kuno Epper (Kep), AGI</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung_intern</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Erläuterung, welche den Katalogeintrag näher beschreibt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dieser Status wird für alle Objekte verwendet, bei denen aktuell eine Nachführung läuft.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">amtsintern</span></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rKreisfoerster</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zur Person, welche dem Forstkreis zugeordnet ist.<br>
+Im Normalfall ist eine Person zugeordnet. Diese übernimmt die Rolle des Kreisförsters. Das Modell lässt es jedoch zu, mehrere Personen zuzuordnen.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">e1a6fbe3-9598-4620-93f0-7ae8e5f89c68</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_forstrevier"><a class="anchor" href="#_klasse_forstrevier"></a><a class="link" href="#_klasse_forstrevier">4.1.2. Klasse <code>Forstrevier</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Forstrevier</code> führt die Informationen zu den Forstrevieren.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Musterha</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1980-03-21T15:38:12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Muelleran</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-07-30T08:07:57</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nummer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forstreviernummer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bezeichnung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bezeichnung des Forstrevieres</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Benediktinerinnenkloster in der Au, Trachslau</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentliche Bemerkung zum Objekt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Das ist eine öffentliche Bemerkung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rForstkreis</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zum Forstkreis, der dem Forstrevier zugeordnet ist.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">e1a6fbe3-9598-4620-93f0-7ae8e5f89c68</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rRevierfoerster</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zur Person, welche dem Forstrevier zugeordnet ist.<br>
+Im Normalfall ist eine Person zugeordnet. Diese übernimmt die Rolle des Revierförsters. Das Modell lässt es jedoch zu, mehrere Personen zuzuordnen.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">e1a6fbe3-9598-4620-93f0-7ae8e5f89c68</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_gebiet"><a class="anchor" href="#_klasse_gebiet"></a><a class="link" href="#_klasse_gebiet">4.1.3. Klasse <code>Gebiet</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Gebiet</code> führt die Informationen zu den Gebieten. Die Klasse enthält die Geometrie.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Musterha</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1980-03-21T15:38:12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Muelleran</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-07-30T08:07:57</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentliche Bemerkung zum Objekt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Das ist eine öffentliche Bemerkung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rForstrevier</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zum Forstrevier, das dem Gebiet zugeordnet ist.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">e1a6fbe3-9598-4620-93f0-7ae8e5f89c68</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
@@ -510,6 +674,120 @@ Kuno Epper (Kep), AGI</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_person"><a class="anchor" href="#_klasse_person"></a><a class="link" href="#_klasse_person">4.1.4. Klasse <code>Person</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Person</code> führt die Informationen zu den Forstkreisen.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Musterha</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1980-03-21T15:38:12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Muelleran</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-07-30T08:07:57</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Vorname</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vorname der Person</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anna</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nachname</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nachname der Person</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Muster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Strasse</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Strassenname</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bahnhofstrasse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Hausnummer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hausnummer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Zusatzzeile</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zusatzzeile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Postfach 987</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PLZ</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Postleitzahl, 4-stellig</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1234</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ort</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ortschaftsname</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Musterwilen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Tel_G</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Telefonnummer Geschäft</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+41 41 819 51 08</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Tel_M</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Telefonnummer mobil</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+41 79 123 45 67</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>E_Mail</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E-Mail-Adresse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:anna.muster@sz.ch">anna.muster@sz.ch</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 </tbody>
@@ -569,7 +847,7 @@ Kuno Epper (Kep), AGI</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-01-28 08:10:21 UTC
+Last updated 2025-01-28 08:31:05 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
