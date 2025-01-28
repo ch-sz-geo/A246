@@ -29,27 +29,185 @@ m| geaendertAm
 | 2024-07-30T08:07:57
 | öffentlich
 m| Nummer
-| Forstkreisnummer gemäss 
+| Forstkreisnummer gemäss §2 in [4]
 | 1
 | öffentlich
-m| Bemerkung
-| öffentliche Bemerkung zum Objekt
-| Das ist eine öffentliche Bemerkung
+m| Bezeichnung
+| Bezeichnung des Forstkreises
+| Muotatal, Fronalpstock, Schwyz, Rossberg, Rigi
 | öffentlich
 m| Bemerkung
 | öffentliche Bemerkung zum Objekt
 | Das ist eine öffentliche Bemerkung
 | öffentlich
-m| Bemerkung_intern
-| Erläuterung, welche den Katalogeintrag näher beschreibt
-| Dieser Status wird für alle Objekte verwendet, bei denen aktuell eine Nachführung läuft.
-| +++<span style="color:red;">amtsintern</span>+++
+4+| *Beziehungsattribute*
+m| rKreisfoerster
+| Fremdschlüssel zur Person, welche dem Forstkreis zugeordnet ist. +
+Im Normalfall ist eine Person zugeordnet. Diese übernimmt die Rolle des Kreisförsters. Das Modell lässt es jedoch zu, mehrere Personen zuzuordnen.
+| e1a6fbe3-9598-4620-93f0-7ae8e5f89c68
+| öffentlich
+|===
+
+==== Klasse `+Forstrevier+`
+Die Klasse `+Forstrevier+` führt die Informationen zu den Forstrevieren.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| +++<span style="color:red;">intern</span>+++
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| öffentlich
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| +++<span style="color:red;">intern</span>+++
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| öffentlich
+m| Nummer
+| Forstreviernummer
+| 1
+| öffentlich
+m| Bezeichnung
+| Bezeichnung des Forstrevieres
+| Benediktinerinnenkloster in der Au, Trachslau
+| öffentlich
+m| Bemerkung
+| öffentliche Bemerkung zum Objekt
+| Das ist eine öffentliche Bemerkung
+| öffentlich
+4+| *Beziehungsattribute*
+m| rForstkreis
+| Fremdschlüssel zum Forstkreis, der dem Forstrevier zugeordnet ist.
+| e1a6fbe3-9598-4620-93f0-7ae8e5f89c68
+| öffentlich
+m| rRevierfoerster
+| Fremdschlüssel zur Person, welche dem Forstrevier zugeordnet ist. +
+Im Normalfall ist eine Person zugeordnet. Diese übernimmt die Rolle des Revierförsters. Das Modell lässt es jedoch zu, mehrere Personen zuzuordnen.
+| e1a6fbe3-9598-4620-93f0-7ae8e5f89c68
+| öffentlich
+|===
+
+==== Klasse `+Gebiet+`
+Die Klasse `+Gebiet+` führt die Informationen zu den Gebieten. Die Klasse enthält die Geometrie.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| +++<span style="color:red;">intern</span>+++
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| öffentlich
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| +++<span style="color:red;">intern</span>+++
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| öffentlich
+m| Bemerkung
+| öffentliche Bemerkung zum Objekt
+| Das ist eine öffentliche Bemerkung
+| öffentlich
+4+| *Beziehungsattribute*
+m| rForstrevier
+| Fremdschlüssel zum Forstrevier, das dem Gebiet zugeordnet ist.
+| e1a6fbe3-9598-4620-93f0-7ae8e5f89c68
+| öffentlich
 4+| *Geometrie*
 m| Geometrie
 | Geometrie des Objektes
 | (ohne Beispiel)
 | öffentlich
 |===
+
+==== Klasse `+Person+`
+Die Klasse `+Person+` führt die Informationen zu den Forstkreisen.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| +++<span style="color:red;">intern</span>+++
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| öffentlich
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| +++<span style="color:red;">intern</span>+++
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| öffentlich
+m| Vorname
+| Vorname der Person
+| Anna
+| öffentlich
+m| Nachname
+| Nachname der Person
+| Muster
+| öffentlich
+m| Strasse
+| Strassenname
+| Bahnhofstrasse
+| öffentlich
+m| Hausnummer
+| Hausnummer
+| 12
+| öffentlich
+m| Zusatzzeile
+| Zusatzzeile
+| Postfach 987
+| öffentlich
+m| PLZ
+| Postleitzahl, 4-stellig
+| 1234
+| öffentlich
+m| Ort
+| Ortschaftsname
+| Musterwilen
+| öffentlich
+m| Tel_G
+| Telefonnummer Geschäft
+| +41 41 819 51 08
+| öffentlich
+m| Tel_M
+| Telefonnummer mobil
+| +41 79 123 45 67
+| öffentlich
+m| E_Mail
+| E-Mail-Adresse
+| anna.muster@sz.ch
+| öffentlich
+|===
+
 
 
 [%header, cols="10%, 10%, 10%, 60%, 10%", format=csv, separator=;]
