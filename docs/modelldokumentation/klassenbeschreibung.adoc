@@ -3,7 +3,7 @@
 Das Topic `+Fachdaten+` umfasst die eigentlichen, fachlichen Klassen des Themas.
 
 ==== Klasse `+Forstkreis+`
-Die Klasse `+Forstkreis+` führt die Informationen zu den Forstkreisen.
+Die Klasse `+Forstkreis+` führt die Informationen zu den Forstkreisen. Die Klasse enthält ausschliesslich fachliche Attribute. Eine Geometrie ist nicht vorhanden. Die Ausdehnung eines Forstkreises ergibt sich aufgrund der ihm zugeordneten Forstreviere.
 
 [cols=4*,options="header"]
 |===
@@ -49,7 +49,7 @@ Im Normalfall ist eine Person zugeordnet. Diese übernimmt die Rolle des Kreisf�
 |===
 
 ==== Klasse `+Forstrevier+`
-Die Klasse `+Forstrevier+` führt die Informationen zu den Forstrevieren.
+Die Klasse `+Forstrevier+` führt die Informationen zu den Forstrevieren. Die Klasse enthält ausschliesslich fachliche Attribute. Eine Geometrie ist nicht vorhanden. Die Ausdehnung eines Forstrevieres ergibt sich aufgrund der ihm zugeordneten Flächen der Klasse `+Gebiet+`.
 
 [cols=4*,options="header"]
 |===
@@ -207,8 +207,6 @@ m| E_Mail
 | anna.muster@sz.ch
 | öffentlich
 |===
-
-
 
 [%header, cols="10%, 10%, 10%, 60%, 10%", format=csv, separator=;]
 |=======
