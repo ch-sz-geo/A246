@@ -207,16 +207,9 @@ th {
 </li>
 <li><a href="#_klassenbeschreibung">4. Klassenbeschreibung</a>
 <ul class="sectlevel2">
-<li><a href="#_topic_stammdaten">4.1. Topic <code>Stammdaten</code></a>
+<li><a href="#_topic_fachdaten">4.1. Topic <code>Fachdaten</code></a>
 <ul class="sectlevel3">
-<li><a href="#_klasse_katalogeintrag">4.1.1. Klasse <code>Katalogeintrag</code></a></li>
-<li><a href="#_klasse_standard_katalogeintrag">4.1.2. Klasse <code>Standard-Katalogeintrag</code></a></li>
-<li><a href="#_klasse_separate_stammdaten">4.1.3. Klasse <code>separate Stammdaten</code></a></li>
-</ul>
-</li>
-<li><a href="#_topic_fachdaten">4.2. Topic <code>Fachdaten</code></a>
-<ul class="sectlevel3">
-<li><a href="#_klasse_klasse1">4.2.1. Klasse <code>Klasse1</code></a></li>
+<li><a href="#_klasse_forstkreis">4.1.1. Klasse <code>Forstkreis</code></a></li>
 </ul>
 </li>
 </ul>
@@ -419,187 +412,14 @@ Kuno Epper (Kep), AGI</p></td>
 <h2 id="_klassenbeschreibung"><a class="anchor" href="#_klassenbeschreibung"></a><a class="link" href="#_klassenbeschreibung">4. Klassenbeschreibung</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_topic_stammdaten"><a class="anchor" href="#_topic_stammdaten"></a><a class="link" href="#_topic_stammdaten">4.1. Topic <code>Stammdaten</code></a></h3>
-<div class="paragraph">
-<p>Das Topic <code>Stammdaten</code> umfasst alle statischen Werte. Darunter fallen z.B. die Aufzählwerte von Listen (INTERLIS-Datentyp «Aufzählung»). Jede Liste wird in einer eigenen Klasse modelliert.</p>
-</div>
-<div class="paragraph">
-<p>Die Stammdaten werden durch die zuständige Stelle vorgegeben. Bei Bundesthemen ist dies das für die Modellierung zuständige Bundesamt. Bei kantonalen Themen das zuständige kantonale Amt. Die Stammdaten von Bundesthemen können auf der Stufe Kanton erweiert werden. Die kantonalen Erweiterungen werden bei der Überführung ins Bundesmodell den entsprechenden Bundestypen zugeordnet.</p>
-</div>
-<div class="paragraph">
-<p>Die Stammdaten werden durch die Abteilung Geoinformation nachgeführt und im Internet veröffentlicht.</p>
-</div>
-<div class="sect3">
-<h4 id="_klasse_katalogeintrag"><a class="anchor" href="#_klasse_katalogeintrag"></a><a class="link" href="#_klasse_katalogeintrag">4.1.1. Klasse <code>Katalogeintrag</code></a></h4>
-<div class="paragraph">
-<p>Die Klasse <code>Katalogeintrag</code> enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte Katalogeintrag, sondern nur Objekte von den spezialisierten Klassen.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Beschreibung</th>
-<th class="tableblock halign-left valign-top">Beispiel</th>
-<th class="tableblock halign-left valign-top">Freigabe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Code</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe <a href="https://www.interlis.ch/dokumentation">INTERLIS-Referenzhandbuch</a>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">in_Aenderung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bezeichnung des Katalogeintrages, wie er den Nutzenden angezeigt wird</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">in Änderung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SortierNr</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Reihenfolge des Katalogeintrages in der Auswahlliste</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Erläuterung, welche den Katalogeintrag näher beschreibt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dieser Status wird für alle Objekte verwendet, bei denen aktuell eine Nachführung läuft.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_klasse_standard_katalogeintrag"><a class="anchor" href="#_klasse_standard_katalogeintrag"></a><a class="link" href="#_klasse_standard_katalogeintrag">4.1.2. Klasse <code>Standard-Katalogeintrag</code></a></h4>
-<div class="paragraph">
-<p>Die Verbindlichkeit kam mit der Aufnahme der statischen Waldgrenzen in den ÖREB-Kataster.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Beschreibung</th>
-<th class="tableblock halign-left valign-top">Beispiel</th>
-<th class="tableblock halign-left valign-top">Freigabe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><em>Diese Klasse führt keine zusätzlichen Attribute</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Anforderungen</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Code</code></p></td>
-<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
-<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_klasse_separate_stammdaten"><a class="anchor" href="#_klasse_separate_stammdaten"></a><a class="link" href="#_klasse_separate_stammdaten">4.1.3. Klasse <code>separate Stammdaten</code></a></h4>
-<div class="paragraph">
-<p>Über den Typ wird die Art der Geometrie festgelegt.</p>
-</div>
-<div class="paragraph">
-<p>In der Klasse <code>Typ</code> wurde anfänglich auch der Typ des Wirkbereiches aufgeführt. Weil ein Wirkbereich jedoch stets gleich symbolisiert wird, wurde entschieden, auf diesen Eintrag zu verzichtet.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Beschreibung</th>
-<th class="tableblock halign-left valign-top">Beispiel</th>
-<th class="tableblock halign-left valign-top">Freigabe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Code</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe <a href="https://www.interlis.ch/dokumentation">INTERLIS-Referenzhandbuch</a>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ausserhalb_Bauzonen_statisch</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bezeichnung des Katalogeintrages, wie er den Nutzenden angezeigt wird</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Waldgrenze ausserhalb Bauzone (statisch)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Abkuerzung</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kurzform des Katalogeintrages</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">WGraB_s</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SortierNr</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Reihenfolge des Katalogeintrages in der Auswahlliste</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Erläuterung, welche den Katalogeintrag näher beschreibt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Statische Waldgrenze in Gebieten ausserhalb der Bauzonen, in denen der Kanton eine Zunahme des Waldes verhindern will.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Symbol</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bild des Legendeneintrages; codiert als Base64-Wert</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">iVBORw0KGg&#8230;&#8203; (gekürzt)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_topic_fachdaten"><a class="anchor" href="#_topic_fachdaten"></a><a class="link" href="#_topic_fachdaten">4.2. Topic <code>Fachdaten</code></a></h3>
+<h3 id="_topic_fachdaten"><a class="anchor" href="#_topic_fachdaten"></a><a class="link" href="#_topic_fachdaten">4.1. Topic <code>Fachdaten</code></a></h3>
 <div class="paragraph">
 <p>Das Topic <code>Fachdaten</code> umfasst die eigentlichen, fachlichen Klassen des Themas.</p>
 </div>
 <div class="sect3">
-<h4 id="_klasse_klasse1"><a class="anchor" href="#_klasse_klasse1"></a><a class="link" href="#_klasse_klasse1">4.2.1. Klasse <code>Klasse1</code></a></h4>
+<h4 id="_klasse_forstkreis"><a class="anchor" href="#_klasse_forstkreis"></a><a class="link" href="#_klasse_forstkreis">4.1.1. Klasse <code>Forstkreis</code></a></h4>
 <div class="paragraph">
-<p>Die Klasse <code>Klasse1</code> führt &#8230;&#8203;..</p>
+<p>Die Klasse <code>Forstkreis</code> führt die Informationen zu den Forstkreisen.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -648,15 +468,15 @@ Kuno Epper (Kep), AGI</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gueltigVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datum, an dem das Objekt rechtskräftig wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2024-01-01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nummer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forstkreisnummer gemäss</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gueltigBis</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datum, an dem das Objekt rechtskräftig aufgehoben wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2030-12-31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentliche Bemerkung zum Objekt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Das ist eine öffentliche Bemerkung</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
@@ -737,7 +557,7 @@ Kuno Epper (Kep), AGI</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-01-28 08:03:09 UTC
+Last updated 2025-01-28 08:07:31 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
