@@ -9,11 +9,9 @@ Am 1. Januar 2013 trat die https://www.sz.ch/public/upload/assets/5600/214_111.p
 ===  Zweck des Dokuments
 Dieses Dokument beschreibt den Geobasisdatensatz
  
-* *__<Name des Datensatzes>__.* +
+* *__Gebietseinteilung Forst__.* +
 
 __<weitere Beschreibungen>__ +
-
-Der Geobasisdatensatz ist Bestandteil des ÖREB-Katasters. +
 
 Diese Dokumentation richtet sich an alle Personen, welche sich über dieses Thema informieren möchten.
 
