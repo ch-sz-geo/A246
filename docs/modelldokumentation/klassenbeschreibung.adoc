@@ -99,7 +99,7 @@ Im Normalfall ist eine Person zugeordnet. Diese übernimmt die Rolle des Revierf
 |===
 
 ==== Klasse `+Gebiet+`
-Die Klasse `+Gebiet+` führt die Informationen zu den Gebieten. Die Klasse enthält die Geometrie.
+Die Klasse `+Gebiet+` führt die Informationen zu den Gebieten. Die Klasse führt die Flächen der Forstreviere. Die Flächen der Forstkriese werden anhand der Zuordnung der Forstreviere zu den Forstkreisen bestimmt.
 
 [cols=4*,options="header"]
 |===
