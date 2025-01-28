@@ -1,9 +1,9 @@
 == Diagramme
 === Komponentendiagramm
-image::../img/Komponentendiagramm.jpg[]
+image::../img/SZ_Gebietseinteilung_Forst_V1_Klassendiagramm.png[]
 
 === Klassendiagramm
-image::../img/Klassendiagramm.jpg[]
+image::../img/SZ_Gebietseinteilung_Forst_V1_Komponentendiagramm.png[]
 
 ifdef::backend-pdf[]
 <<<
