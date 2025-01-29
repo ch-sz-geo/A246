@@ -36,7 +36,7 @@ h| Version h| Datum h| Koreferent h| Prüfstelle
 h| Nr. h| Titel h| Autor(en) h| Version
 | [01] | kantonales Geoinformationsgesetz (kGeoiG) (SRSZ 214.110) | Kt. SZ | 24.06.2010
 | [02] | Verordnung zum kantonalen Geoinformationsgesetz (kGeoiV) (SRSZ 214.111) | Kt. SZ | 18.12.2012
-| [03] | Kantonales Waldgesetz (kWaG) (kGeoiV) (SRSZ 313.110) | Kt. SZ | 21.10.1998
+| [03] | kantonales Waldgesetz (kWaG) (kGeoiV) (SRSZ 313.110) | Kt. SZ | 21.10.1998
 | [04] | Vollzugsverordnung zum kantonalen Waldgesetz (kWaV) (SRSZ 313.111) | Kt. SZ | 18.12.2001
 |=======
 ====
