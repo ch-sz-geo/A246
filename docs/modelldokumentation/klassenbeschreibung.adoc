@@ -141,7 +141,9 @@ m| Geometrie
 |===
 
 ==== Klasse `+Person+`
-Die Klasse `+Person+` führt die Informationen zu den Forstkreisen.
+Die Klasse `+Person+` führt die Informationen zu den Personen, welche den Forstkreisen bzw. den Forstrevieren zugeordnet sind. Zum Zeitpunkt der Modellierung ist einem Forstkries bzw. einem Forstrevier nur immer eine Person zugeordnet. Es sind dies die verantwortlichen Kreisförster bzw. Revierförster. Um mehr Flexibilität zu gewinnen, wurde die Kardinalität auf 0..* gesetzt. Damit könnten zukünftig mehrere Personen den verschiedenen Gebieten zugeordnet werden (z.B. im Falle einer Co-Führung, wenn mehrere Förster für ein Kreis zuständig sind).
+
+Alle personenbezogenen Informationen sind auf der Internetseite des Amtes öffentlich aufgeschaltet. Aus diesem Grund wurde die Freigabestufe der Attribute auf "öffentlich" gesetzt.
 
 [cols=4*,options="header"]
 |===
