@@ -9,7 +9,7 @@
 |Erstelldatum | 2025-01-27
 |letzte Änderung | {docdate}
 | Themen-Nummer | A246
-| ID nach kGeoiV | --- 
+| ID nach kGeoiV | 19-SZ 
 | Beteiligte | Christoph Angst (CA), AWN + 
 Kuno Epper (Kep), AGI
 | Status a| - [x] Entwurf 
