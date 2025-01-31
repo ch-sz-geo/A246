@@ -601,7 +601,7 @@ Im Normalfall ist eine Person zugeordnet. Diese übernimmt die Rolle des Revierf
 <div class="sect3">
 <h4 id="_klasse_gebiet"><a class="anchor" href="#_klasse_gebiet"></a><a class="link" href="#_klasse_gebiet">4.1.3. Klasse <code>Gebiet</code></a></h4>
 <div class="paragraph">
-<p>Die Klasse <code>Gebiet</code> führt die Informationen zu den Gebieten. Die Klasse führt die Flächen der Forstreviere. Die Flächen der Forstkriese werden anhand der Zuordnung der Forstreviere zu den Forstkreisen bestimmt.</p>
+<p>Die Klasse <code>Gebiet</code> führt die Flächen der Forstreviere. Aus diesen wird über eine Verschmelzung die Flächen der Forstkreise abgeleitet.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -679,10 +679,10 @@ Im Normalfall ist eine Person zugeordnet. Diese übernimmt die Rolle des Revierf
 <div class="sect3">
 <h4 id="_klasse_person"><a class="anchor" href="#_klasse_person"></a><a class="link" href="#_klasse_person">4.1.4. Klasse <code>Person</code></a></h4>
 <div class="paragraph">
-<p>Die Klasse <code>Person</code> führt die Informationen zu den Personen, welche den Forstkreisen bzw. den Forstrevieren zugeordnet sind. Zum Zeitpunkt der Modellierung ist einem Forstkries bzw. einem Forstrevier nur immer eine Person zugeordnet. Es sind dies die verantwortlichen Kreisförster bzw. Revierförster. Um mehr Flexibilität zu gewinnen, wurde die Kardinalität auf 0..* gesetzt. Damit könnten zukünftig mehrere Personen den verschiedenen Gebieten zugeordnet werden (z.B. im Falle einer Co-Führung, wenn mehrere Förster für ein Kreis zuständig sind).</p>
+<p>Die Klasse <code>Person</code> führt die Informationen zu den Personen, welche den Forstkreisen bzw. den Forstrevieren zugeordnet sind. Zum Zeitpunkt der Modellierung ist einem Forstkries bzw. einem Forstrevier nur immer eine Person zugeordnet. Es sind dies die verantwortlichen Kreisförster bzw. Revierförster. Um mehr Flexibilität zu gewinnen, wurde die Kardinalität auf <code>0..*</code> gesetzt. Damit könnten den verschiedenen Gebieten auch mehrere Personen zugeordnet werden (z.B. im Falle einer Co-Führung, wenn mehrere Förster für ein Kreis zuständig sind).</p>
 </div>
 <div class="paragraph">
-<p>Alle personenbezogenen Informationen sind auf der Internetseite des Amtes öffentlich aufgeschaltet. Aus diesem Grund wurde die Freigabestufe der Attribute auf "öffentlich" gesetzt.</p>
+<p>Alle personenbezogenen Informationen sind auf der Internetseite des Amtes öffentlich aufgeschaltet. Aus diesem Grund ist die Freigabestufe, mit Ausnahme bestimmter technischer Attribute, "öffentlich".</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -799,7 +799,7 @@ Im Normalfall ist eine Person zugeordnet. Diese übernimmt die Rolle des Revierf
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-01-31 09:47:36 UTC
+Last updated 2025-01-31 10:05:29 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
