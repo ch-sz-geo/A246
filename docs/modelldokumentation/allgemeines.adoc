@@ -11,8 +11,6 @@ Dieses Dokument beschreibt den Geobasisdatensatz
  
 * *__Gebietseinteilung Forst__.*
 
-Die Modellierung dieses Datensatzes wurde deshalb angestossen, weil er im Forstwesen ein wichtiger Grundlagendatensatz bildet. So wird er z.B. beim Thema https://ch-sz-geo.github.io/A064["Schutzwald (A064)"] für die Zuordnung des Schutzwaldes  zu den Forstkreisen und Forstrevieren verwendet.
-
 Diese Dokumentation richtet sich an alle Personen, welche sich über dieses Thema informieren möchten.
 
 ifdef::backend-pdf[]
