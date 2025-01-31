@@ -99,7 +99,7 @@ Im Normalfall ist eine Person zugeordnet. Diese übernimmt die Rolle des Revierf
 |===
 
 ==== Klasse `+Gebiet+`
-Die Klasse `+Gebiet+` führt die Informationen zu den Gebieten. Die Klasse führt die Flächen der Forstreviere. Die Flächen der Forstkriese werden anhand der Zuordnung der Forstreviere zu den Forstkreisen bestimmt.
+Die Klasse `+Gebiet+` führt die Flächen der Forstreviere. Aus diesen wird über eine Verschmelzung die Flächen der Forstkreise abgeleitet.
 
 [cols=4*,options="header"]
 |===
@@ -141,9 +141,9 @@ m| Geometrie
 |===
 
 ==== Klasse `+Person+`
-Die Klasse `+Person+` führt die Informationen zu den Personen, welche den Forstkreisen bzw. den Forstrevieren zugeordnet sind. Zum Zeitpunkt der Modellierung ist einem Forstkries bzw. einem Forstrevier nur immer eine Person zugeordnet. Es sind dies die verantwortlichen Kreisförster bzw. Revierförster. Um mehr Flexibilität zu gewinnen, wurde die Kardinalität auf 0..* gesetzt. Damit könnten zukünftig mehrere Personen den verschiedenen Gebieten zugeordnet werden (z.B. im Falle einer Co-Führung, wenn mehrere Förster für ein Kreis zuständig sind).
+Die Klasse `+Person+` führt die Informationen zu den Personen, welche den Forstkreisen bzw. den Forstrevieren zugeordnet sind. Zum Zeitpunkt der Modellierung ist einem Forstkries bzw. einem Forstrevier nur immer eine Person zugeordnet. Es sind dies die verantwortlichen Kreisförster bzw. Revierförster. Um mehr Flexibilität zu gewinnen, wurde die Kardinalität auf `+0..*+` gesetzt. Damit könnten den verschiedenen Gebieten auch mehrere Personen zugeordnet werden (z.B. im Falle einer Co-Führung, wenn mehrere Förster für ein Kreis zuständig sind).
 
-Alle personenbezogenen Informationen sind auf der Internetseite des Amtes öffentlich aufgeschaltet. Aus diesem Grund wurde die Freigabestufe der Attribute auf "öffentlich" gesetzt.
+Alle personenbezogenen Informationen sind auf der Internetseite des Amtes öffentlich aufgeschaltet. Aus diesem Grund ist die Freigabestufe, mit Ausnahme bestimmter technischer Attribute, "öffentlich".
 
 [cols=4*,options="header"]
 |===
