@@ -40,6 +40,7 @@ h| Nr. h| Titel h| Autor(en) h| Version
 | [[doc-04]] [04] | https://www.sz.ch/public/upload/assets/5600/214_111.pdf?fp=11[Verordnung zum kantonalen Geoinformationsgesetz (kGeoiV) (SRSZ 214.111)] | Kt. SZ | 18.12.2012
 | [[doc-05]] [05] | https://www.fedlex.admin.ch/eli/cc/1992/2521_2521_2521/de[Bundesgesetz über den Wald (WaG) (SR 921.0)] | Bund | 4.10.1991
 | [[doc-06]] [06] | https://www.fedlex.admin.ch/eli/cc/1992/2538_2538_2538/de[Verordnung über den Wald (WaV) (SR 921.01)] | Bund | 30.11.1992
+| [[doc-07]] [07] | https://www.sz.ch/public/upload/assets/6976/313_111.pdf?fp=12[Vollzugsverordnung zum kantonalen Waldgesetz (kWaV) (SRSZ 313.111)] | Kt. SZ | 18.12.2001
 |=======
 ====
 
