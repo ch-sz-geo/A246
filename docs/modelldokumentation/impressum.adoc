@@ -1,10 +1,6 @@
 [discrete]
 === Impressum
 
-[[meinAnker]]
-==== Test
-
-
 .Erstellung
 [%collapsible]
 ====
@@ -38,10 +34,12 @@ h| Version h| Datum h| Koreferent h| Prüfstelle
 [cols="10%, 70%, 10%, 10%"]
 |=======
 h| Nr. h| Titel h| Autor(en) h| Version
-| [01] | kantonales Geoinformationsgesetz (kGeoiG) (SRSZ 214.110) | Kt. SZ | 24.06.2010
-| [02] | Verordnung zum kantonalen Geoinformationsgesetz (kGeoiV) (SRSZ 214.111) | Kt. SZ | 18.12.2012
-| [03] | kantonales Waldgesetz (kWaG) (kGeoiV) (SRSZ 313.110) | Kt. SZ | 21.10.1998
-| [04] | Vollzugsverordnung zum kantonalen Waldgesetz (kWaV) (SRSZ 313.111) | Kt. SZ | 18.12.2001
+| [[doc-01]] [01] | https://www.fedlex.admin.ch/eli/cc/2008/388/de[Bundesgesetz über Geoinformation (GeoIG) (SR 510.62)] | Bund | 05.10.2007
+| [[doc-02]] [02] | https://www.fedlex.admin.ch/eli/cc/2008/389/de[Verordnung über Geoinformation (GeoIV) (SR 510.620)] | Bund | 21.05.2008
+| [[doc-03]] [03] | https://www.sz.ch/public/upload/assets/48275/214_110.pdf?fp=2[kantonales Geoinformationsgesetz (kGeoiG) (SRSZ 214.110)] | Kt. SZ | 24.06.2010
+| [[doc-04]] [04] | https://www.sz.ch/public/upload/assets/5600/214_111.pdf?fp=11[Verordnung zum kantonalen Geoinformationsgesetz (kGeoiV) (SRSZ 214.111)] | Kt. SZ | 18.12.2012
+| [[doc-05]] [05] | https://www.fedlex.admin.ch/eli/cc/1992/2521_2521_2521/de[Bundesgesetz über den Wald (WaG) (SR 921.0)] | Bund | 4.10.1991
+| [[doc-06]] [06] | https://www.fedlex.admin.ch/eli/cc/1992/2538_2538_2538/de[Verordnung über den Wald (WaV) (SR 921.01)] | Bund | 30.11.1992
 |=======
 ====
 
