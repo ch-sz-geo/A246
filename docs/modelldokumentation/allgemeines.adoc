@@ -4,12 +4,13 @@ Seit dem 1. Juli 2008 ist das Bundesgesetz über Geoinformation (GeoIG, SR 510.6
 
 Am 1. Januar 2013 trat die kantonale Verordnung über Geoinformation (kGeoiV, SRSZ 214.111) <<allgemeines.adoc#doc-04,[4]>> in Kraft. Sie präzisiert das kGeoiG in fachlicher sowie technischer Hinsicht und führt im Anhang 1 den „Katalog der Geobasisdaten des Bundesrechts mit Zuständigkeit beim Kanton“ und im Anhang 2 den „Katalog der Geobasisdaten des kantonalen Rechts“. Darin werden die Fachstellen definiert, welche für die Ausarbeitung eines Geodatenmodells zuständig sind.
 
-===  Zweck des Dokuments
+=== Zweck des Dokuments
 Dieses Dokument beschreibt den Geobasisdatensatz
  
 * *__Gebietseinteilung Forst__.*
 
-Es richtet sich an folgende Nutzergruppen:
+=== Zielgruppen
+Dieses Dokument richtet sich an folgende Nutzergruppen:
 
 * **Fachstellen für Modellierung,** die den inhaltlichen Rahmen des Themas festlegen,
 * **Datenbearbeiterinnen und -bearbeiter,** die sich über die Prozesse und Methoden der Datenpflege informieren,
