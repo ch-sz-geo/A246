@@ -1,8 +1,8 @@
 == Modellbeschreibung
 
-Das Bundesgesetz über den Wald gibt vor, dass die Kantone «für eine zweckmässige Organisation ihres Forstdienstes» sorgen (Art. 51 Abs. 1 WaG, SR 921.0)<<impressum.adoc#meinAnker, [1]>>. Hierzu soll das Kantonsgebiet in Forstkreise und Forstreviere eingeteilt sein, welche durch ausgebildete Waldfachleute geleitet werden (Art. 51 Abs. 2 WaG).
+Das Bundesgesetz über den Wald gibt vor, dass die Kantone «für eine zweckmässige Organisation ihres Forstdienstes» sorgen (Art. 51 Abs. 1 WaG, SR 921.0)<<impressum.adoc#doc-05, [05]>>. Hierzu soll das Kantonsgebiet in Forstkreise und Forstreviere eingeteilt sein, welche durch ausgebildete Waldfachleute geleitet werden (Art. 51 Abs. 2 WaG).
 
-Der Kanton Schwyz ist in 3 Forstkreise mit je drei Forstrevieren eingeteilt (§ 2 Vollzugsverordnung zum kantonalen Waldgesetz kWaV, SRSZ 313.111). Diese Einteilung besteht seit der Reorganisation von 2018. Jeder Forstkreis wird durch eine/n Kreisförster/in (Forstingenieur ETH oder FH) geleitet, welchen je drei Revierförster (Förster HF) zugeteilt sind. Die Forstkreisbüros sind dezentral in Schwyz, Einsiedeln und Lachen stationiert. Die Gesamtleitung des kantonalen Forstdienstes obliegt der/dem Fachbereichsleiter/in Wald mit Büro in Schwyz. Der kantonale Forstdienst ist Teil des Amts für Wald und Natur (AWN) im Umweltdepartement (§ 4 und 5 KWaV).
+Der Kanton Schwyz ist in drei Forstkreise mit je drei Forstrevieren eingeteilt (§ 2 Vollzugsverordnung zum kantonalen Waldgesetz kWaV, SRSZ 313.111)<<impressum.adoc#doc-06, [06]>>. Diese Einteilung besteht seit der Reorganisation von 2018. Jeder Forstkreis wird durch eine/n Kreisförster/in (Forstingenieur ETH oder FH) geleitet, welchen je drei Revierförster (Förster HF) zugeteilt sind. Die Forstkreisbüros sind dezentral in Schwyz, Einsiedeln und Lachen stationiert. Die Gesamtleitung des kantonalen Forstdienstes obliegt der/dem Fachbereichsleiter/in Wald mit Büro in Schwyz. Der kantonale Forstdienst ist Teil des Amts für Wald und Natur (AWN) im Umweltdepartement (§ 4 und 5 kWaV).
 
 ifdef::backend-pdf[]
 <<<
