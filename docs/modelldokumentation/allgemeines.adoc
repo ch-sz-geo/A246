@@ -11,7 +11,12 @@ Dieses Dokument beschreibt den Geobasisdatensatz
  
 * *__Gebietseinteilung Forst__.*
 
-Diese Dokumentation richtet sich an alle Personen, welche sich über dieses Thema informieren möchten.
+Es richtet sich an folgende Nutzergruppen:
+
+* **Fachstellen für Modellierung,** die den inhaltlichen Rahmen des Themas festlegen,
+* **Datenbearbeiterinnen und -bearbeiter,** die sich über die Prozesse und Methoden der Datenpflege informieren,
+* **Verantwortliche für die Datenpublikation,** die die Daten entsprechend der Freigabestufe veröffentlichen und die Transformation in andere Modelle durchführen sowie
+* **Endnutzerinnen und Endnutzer,** die sich über den Inhalt und die Struktur der Daten informieren möchten.
 
 ifdef::backend-pdf[]
 <<<
